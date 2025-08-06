@@ -337,9 +337,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 791367997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eca04fbc2aac414580559e3e6d49f55, type: 3}
+  m_Script: {fileID: 11500000, guid: 70157961654638941887a3badab2cf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 5
+  forwardSpeed: 3
+  maxFallSpeed: -8
+  rotationSpeed: 4
+  maxRotationAngle: 45
 --- !u!58 &791368001
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -389,7 +394,7 @@ GameObject:
   - component: {fileID: 1279342488}
   m_Layer: 0
   m_Name: pipespawn
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,8 +412,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pipe: {fileID: 1761060290921550284, guid: 6fd4f6a6e7d293f46b66b8e8e171c667, type: 3}
-  spwanRate: 2
+  spawnRate: 7
   heightOffset: 10
+  pipeSpeed: 3
+  destroyDistance: -15
 --- !u!4 &1279342489
 Transform:
   m_ObjectHideFlags: 0
@@ -436,8 +443,8 @@ GameObject:
   - component: {fileID: 1524127701}
   - component: {fileID: 1524127700}
   m_Layer: 0
-  m_Name: ground
-  m_TagString: Untagged
+  m_Name: Ground
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

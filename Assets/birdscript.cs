@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class BirdScript : MonoBehaviour
+public class birdscript : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float jumpForce = 5f;
-    public float forwardSpeed = 3f;
+    public float forwardSpeed = 9f;
     public float maxFallSpeed = -8f;
 
     [Header("Rotation Settings")]
@@ -18,7 +18,7 @@ public class BirdScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         // Make sure the bird starts moving forward
-        rb.velocity = new Vector2(forwardSpeed, 0);
+        rb.velocity = new Vector2(forwardSpeed, 1);
     }
 
     void Update()
@@ -106,6 +106,6 @@ public class BirdScript : MonoBehaviour
         isDead = false;
         transform.position = Vector3.zero; // Reset position
         transform.rotation = Quaternion.identity; // Reset rotation
-        rb.velocity = new Vector2(forwardSpeed, 0);
+        rb.velocity = new Vector2(forwardSpeed, 1);
     }
 }
